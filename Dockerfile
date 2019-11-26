@@ -11,7 +11,7 @@ RUN echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" > /etc
   apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50 && \
   export TERM=dumb ; apt-get update && apt-get install -y \
     openjdk-8-jre=8u222-b10-1ubuntu1~16.04.1 \
-    unifi=5.11.50-12745-1 \
+    unifi=5.12.35-12979-1 \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # The wrapper
