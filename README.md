@@ -11,3 +11,5 @@ Instructions: https://help.ui.com/hc/en-us/articles/220066768-UniFi-How-to-Insta
   - /usr/lib/unifi/data
   - /usr/lib/unifi/logs
   - /usr/lib/unifi/run
+- environment:
+  - JVM_MAX_HEAP: 1G

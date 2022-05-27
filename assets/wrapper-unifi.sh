@@ -2,6 +2,11 @@
 
 set -e
 
+if [ -z "$JVM_MAX_HEAP" ]; then
+  JVM_MAX_HEAP=1G
+fi
+echo "JVM_MAX_HEAP : $JVM_MAX_HEAP"
+
 BASEDIR=/usr/lib/unifi
 DATADIR=$BASEDIR/data
 LOGDIR=$BASEDIR/logs
@@ -24,4 +29,5 @@ cd $BASEDIR
   -Dunifi.logdir=${LOGDIR} \
   -Dunifi.rundir=${RUNDIR} \
   -classpath $CLASSPATH \
+  -Xmx$JVM_MAX_HEAP \
   com.ubnt.ace.Launcher start
