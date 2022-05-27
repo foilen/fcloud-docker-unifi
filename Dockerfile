@@ -11,7 +11,7 @@ RUN echo 'deb https://www.ui.com/downloads/unifi/debian stable ubiquiti' > /etc/
   wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg && \
   export TERM=dumb ; apt-get update && apt-get install -y \
     openjdk-8-jre \
-    unifi=6.2.26-15319-1 \
+    unifi=7.1.66-17875-1 \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # The wrapper
